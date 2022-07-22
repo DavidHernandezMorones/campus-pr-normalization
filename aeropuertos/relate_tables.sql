@@ -1,0 +1,11 @@
+ALTER TABLE Ciudad
+ADD CONSTRAINT FK_Ciudad_Pais FOREIGN KEY (PaisID) REFERENCES Pais(PaisId)
+GO
+
+ALTER TABLE Aeropuerto
+ADD CONSTRAINT FK_Aeropuerto_Ciudad FOREIGN KEY (CiudadId) REFERENCES Ciudad(CiudadId)
+GO
+
+ALTER TABLE Aeropuerto
+ADD CONSTRAINT FK_Aeropuerto_Codig FOREIGN KEY (CodigoId) REFERENCES Codigo(CodigoId)
+GO
